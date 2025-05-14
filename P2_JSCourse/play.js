@@ -1,12 +1,13 @@
-var name = "Den";
-var age = 29
-var userHobbies = true;
-console.log(name, age, userHobbies);
-var nameAgeCombination=name+age;
-
-function whoIsUser(name, age) {
-    console.log(nameAgeCombination);
-    return "Name is " + name + " , Age is "+ age;
+function myFunction(a,b) {
+    return a+b;
 }
 
-console.log(whoIsUser(name, age));
+// const myArrowFunction = (a,b) => {
+//     return a+b;
+// }
+
+const myArrowFunction = (a,b) => a+b;
+
+const random = () => 10;
+
+console.log(myFunction(1,2), myArrowFunction(1,2), random());
