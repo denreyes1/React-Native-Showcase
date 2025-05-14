@@ -1,13 +1,9 @@
-function myFunction(a,b) {
-    return a+b;
+const person = {
+    name: 'Den',
+    age: 29,
+    greet: function(){
+        console.log("Hi my name is "+this.name);
+    }
 }
 
-// const myArrowFunction = (a,b) => {
-//     return a+b;
-// }
-
-const myArrowFunction = (a,b) => a+b;
-
-const random = () => 10;
-
-console.log(myFunction(1,2), myArrowFunction(1,2), random());
+console.log(person.greet());
