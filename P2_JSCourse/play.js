@@ -1,16 +1,11 @@
-let hobbies = ["sports", "cooking", 25, true, {name: "baking"}, ["reading", "traveling"]]
-// console.log(hobbies);
+const hobbies = ["reading", "cooking"];
+hobbies.push("programming");
+console.log(hobbies);
 
-for(let hobby of hobbies){
-    // console.log(hobby);
+const hobbiesObject = {
+    name: 'Den',
+    type: 'Programming'
 }
 
-let hobbiesArray = ["sports", "cooking", "painting"];
-let hobbiesSubset = hobbiesArray.slice(0,2);
-console.log(hobbiesSubset);
-
-let filteredHobbies = hobbiesArray.filter((val) => val !== "sports");
-console.log(filteredHobbies);
-
-let updatedHobbies = hobbiesArray.map((string) => "hobby: " + val);
-console.log(updatedHobbies);
+hobbiesObject.age = 29;
+console.log(hobbiesObject);
