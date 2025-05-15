@@ -1,9 +1,16 @@
-const person = {
-    name: 'Den',
-    age: 29,
-    greet: function(){
-        console.log("Hi my name is "+this.name);
-    }
+let hobbies = ["sports", "cooking", 25, true, {name: "baking"}, ["reading", "traveling"]]
+// console.log(hobbies);
+
+for(let hobby of hobbies){
+    // console.log(hobby);
 }
 
-console.log(person.greet());
+let hobbiesArray = ["sports", "cooking", "painting"];
+let hobbiesSubset = hobbiesArray.slice(0,2);
+console.log(hobbiesSubset);
+
+let filteredHobbies = hobbiesArray.filter((val) => val !== "sports");
+console.log(filteredHobbies);
+
+let updatedHobbies = hobbiesArray.map((string) => "hobby: " + val);
+console.log(updatedHobbies);
