@@ -1,12 +1,11 @@
-const hobbies = ["reading", "cooking"];
-hobbies.push("programming");
-console.log(hobbies);
+const hobbies = ["sports", "cooking"];
+const copiedHobbiesArray = [...hobbies, ...['traveling']];
+console.log(copiedHobbiesArray);
 
-const hobbiesObject = {
-    name: 'Den',
-    type: 'Programming'
-}
+const person = {name: 'Den', age: 29};
+const copiedPerson = {...person, ...{hobby: "traveling"}};
 
-hobbiesObject.age = 29;
-console.log(hobbiesObject);
+console.log(copiedPerson);
 
+const toArray = (...args) => args;
+console.log(toArray(1,2,3));
