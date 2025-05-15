@@ -9,3 +9,4 @@ const hobbiesObject = {
 
 hobbiesObject.age = 29;
 console.log(hobbiesObject);
+
