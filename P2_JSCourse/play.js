@@ -1,11 +1,19 @@
-const hobbies = ["sports", "cooking"];
-const copiedHobbiesArray = [...hobbies, ...['traveling']];
-console.log(copiedHobbiesArray);
+const person = {name: 'Den', age: 29, occupation: 'Developer'};
+// const name = person.name;
+// const age = person.age;
+// const occupation = person.occupation;
 
-const person = {name: 'Den', age: 29};
-const copiedPerson = {...person, ...{hobby: "traveling"}};
+// const {name, age, occupation} = person;
 
-console.log(copiedPerson);
+// console.log(name, age, occupation);
 
-const toArray = (...args) => args;
-console.log(toArray(1,2,3));
+const numbers = [1,2,3,4,5];
+// const first = numbers[0];
+// const second = numbers[1];
+// const third = numbers[2];
+
+const [first, second, third] = numbers;
+console.log(first, second, third);
+
+const {occupation, ...rest} = person;
+console.log(rest);
