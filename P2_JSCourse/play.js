@@ -1,19 +1,31 @@
-const person = {name: 'Den', age: 29, occupation: 'Developer'};
-// const name = person.name;
-// const age = person.age;
-// const occupation = person.occupation;
+// const getUser = username => {
+//     const API_URL = `https://api.github.com/users/${username}`;
+//     return fetch(API_URL).then((value) => value.json());
+// }
 
-// const {name, age, occupation} = person;
+// getUser('openai').then((val) => console.log(val));
 
-// console.log(name, age, occupation);
+// const getUser = async username => {
+//     const API_URL = `https://api.github.com/users/${username}`;
+//     const response = await fetch(API_URL);
+//     const data = response.json();
+//     return data;
+// }
 
-const numbers = [1,2,3,4,5];
-// const first = numbers[0];
-// const second = numbers[1];
-// const third = numbers[2];
+// getUser('openai').then((val) => console.log(val));
 
-const [first, second, third] = numbers;
-console.log(first, second, third);
+const getGithubUser = username => {
+    return new Promise((resolve, reject) => {
+        fetch(`https://api.github.com/users/${username}`).then((response) => response.json()).
+        then(data => {
+            if(data.message === "Not Found"){
+                reject('User not found');
+            }
+            else {
+                resolve(data);
+            }
+        }).catch(err => reject(err));
+    })
+}
 
-const {occupation, ...rest} = person;
-console.log(rest);
+getGithubUser("johndoe").then((val) => console.log(val)).catch((err) => console.log('error', err));
